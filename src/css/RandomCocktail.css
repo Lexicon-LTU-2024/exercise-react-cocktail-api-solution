@@ -1,0 +1,17 @@
+.random-cocktail {
+  width: 400px;
+}
+
+.random-cocktail .image {
+  height: 400px;
+}
+
+.random-cocktail .content {
+  display: flex;
+  justify-content: center;
+}
+
+.random-cocktail .actions {
+  display: flex;
+  justify-content: space-between;
+}

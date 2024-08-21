@@ -1,0 +1,31 @@
+.cocktail-info-page .cocktail-info-wrapper {
+  display: flex;
+
+  width: 800px;
+}
+
+.cocktail-info-page .cocktail-info-wrapper .left-side {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background-size: cover;
+  border-radius: 4px 0 0 4px;
+  height: 400px;
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.cocktail-info-page .cocktail-info-wrapper .right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  flex: 1;
+  padding: 1rem;
+}
+
+.cocktail-info-page .cocktail-info-wrapper .actions {
+  display: flex;
+  justify-content: flex-end;
+}
