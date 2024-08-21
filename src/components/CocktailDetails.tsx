@@ -18,9 +18,7 @@ export function CocktailDetails({ cocktail }: ICocktailDetails): ReactElement {
       justifyContent="space-between"
       padding="1rem 1rem 1rem 0"
     >
-      <Text className="name" variant="h4">
-        {cocktail.name}
-      </Text>
+      <Text variant="h4">{cocktail.name}</Text>
       <Text variant="body1">Best served in: {cocktail.glass}</Text>
       <CocktailIngredients ingredients={cocktail.ingredients} measures={cocktail.measures} />
       <Text variant="body1">{cocktail.instructions}</Text>
