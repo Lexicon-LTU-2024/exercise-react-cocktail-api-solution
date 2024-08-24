@@ -1,7 +1,9 @@
 import { ReactElement, useState } from "react";
+import { Link } from "react-router-dom";
+
 import { getRandomCocktail, ICocktail } from "../utils";
 import { useTypedLoaderData } from "../hooks";
-import { Link } from "react-router-dom";
+import { Button, CocktailImage } from ".";
 
 export function RandomCocktail(): ReactElement {
   const initialRandomCocktail = useTypedLoaderData<ICocktail>();
@@ -17,15 +19,13 @@ export function RandomCocktail(): ReactElement {
   };
 
   return (
-    <article className="random-cocktail">
-      <figure className="image" />
-      <div className="content">
-        <h5>{cocktail.name}</h5>
-      </div>
+    <article id="random-cocktail">
+      <CocktailImage alt={cocktail.name} src={cocktail.image} />
+      <h2 className="name">{cocktail.name}</h2>
       <div className="actions">
-        <button onClick={handleOnClick}>"Another!"</button>
+        <Button onClick={handleOnClick}>"Another!"</Button>
         <Link to={`cocktail/${cocktail.id}`}>
-          <button>See more</button>
+          <Button>Try it out..</Button>
         </Link>
       </div>
     </article>

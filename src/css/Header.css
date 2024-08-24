@@ -1,0 +1,24 @@
+#header {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--blue);
+  height: var(--header-height);
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+
+  .logo {
+    flex: 1;
+
+    .g-link:hover {
+      color: var(--white);
+    }
+  }
+
+  .navbar {
+    display: flex;
+    gap: 2rem;
+  }
+}

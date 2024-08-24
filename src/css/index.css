@@ -1,19 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@import url("./Button.css");
+@import url("./CocktailImage.css");
+@import url("./Header.css");
+@import url("./LandingPage.css");
 @import url("./LoadingPage.css");
 @import url("./RandomCocktail.css");
 
 * {
   box-sizing: border-box;
+  color: var(--white);
+  font-family: "Space Mono", monospace;
   margin: 0;
 }
 
 html {
-  --nav-height: 72px;
+  --header-height: 72px;
+  --blue: #005f8f;
+  --blue-grey: #265973;
+  --blue-dark-grey: #223c47;
+  --dark-grey: #0f171d;
+  --dark-navy: #000f1f;
+  --white: #ccffff;
+
+  --standard-border-radius: 10px;
 }
 
-main {
-  display: flex;
-  justify-content: center;
+body {
+  background-color: var(--dark-navy);
+  padding-top: calc(var(--header-height) + 3rem);
+}
 
-  min-height: 100vh;
-  padding-top: calc(var(--nav-height) + 3rem);
+/* #################### Global styling classes. The prefix "g" means global #################### */
+
+.g-container {
+  padding-inline: 2rem;
+}
+
+.g-link {
+  text-decoration: none;
+
+  &:hover {
+    color: whitesmoke;
+  }
 }

@@ -1,7 +1,14 @@
 import { ReactElement } from "react";
 
-interface IFigureProps {}
+interface IImageProps {
+  alt: string;
+  src: string;
+}
 
-export function CocktailImage(props: IFigureProps): ReactElement {
-  return <figure></figure>;
+export function CocktailImage({ alt, src }: IImageProps): ReactElement {
+  return (
+    <figure className="cocktail-image">
+      <img src={src} alt={alt} />
+    </figure>
+  );
 }
