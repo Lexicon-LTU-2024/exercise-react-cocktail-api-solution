@@ -1,3 +1,4 @@
+import "./CocktailImage.css";
 import { ReactElement } from "react";
 
 interface IImageProps {
@@ -6,8 +7,10 @@ interface IImageProps {
 }
 
 export function CocktailImage({ alt, src }: IImageProps): ReactElement {
+  const classes = ["cocktail-image"];
+
   return (
-    <figure className="cocktail-image">
+    <figure className={classes.join(" ")}>
       <img src={src} alt={alt} />
     </figure>
   );

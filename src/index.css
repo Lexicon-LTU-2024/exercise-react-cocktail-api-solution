@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-@import url("./Button.css");
-@import url("./CocktailImage.css");
-@import url("./Header.css");
-@import url("./LandingPage.css");
-@import url("./LoadingPage.css");
-@import url("./RandomCocktail.css");
-
 * {
   box-sizing: border-box;
   color: var(--white);
@@ -29,7 +22,7 @@ html {
 
 body {
   background-color: var(--dark-navy);
-  padding-top: calc(var(--header-height) + 3rem);
+  padding-block: calc(var(--header-height) + 3rem);
 }
 
 /* #################### Global styling classes. The prefix "g" means global #################### */
@@ -43,5 +36,11 @@ body {
 
   &:hover {
     color: whitesmoke;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .g-container {
+    padding-inline: 6rem;
   }
 }

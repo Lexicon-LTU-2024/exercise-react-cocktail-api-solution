@@ -1,5 +1,7 @@
+import "./LandingPage.css";
+
 import { ReactElement } from "react";
-import { RandomCocktail } from "../components";
+import { RandomCocktail } from "./random-cocktail";
 
 export default function LandingPage(): ReactElement {
   return (

@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import { ICocktail } from "../utils";
-import { CocktailIngredients } from "./CocktailIngredients";
-import { CocktailActions } from "./CocktailActions";
+import { ICocktail } from "../../../utilities";
+import { CocktailIngredients } from "./cocktail-ingredients";
+import { CocktailActions } from "./cocktail-actions";
 
 interface ICocktailDetails {
   cocktail: ICocktail;

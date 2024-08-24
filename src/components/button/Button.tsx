@@ -1,3 +1,4 @@
+import "./Button.css";
 import { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
 
 interface IButtonProps {

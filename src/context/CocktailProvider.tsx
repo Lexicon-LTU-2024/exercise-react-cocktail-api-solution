@@ -1,5 +1,5 @@
 import { createContext, ReactElement, ReactNode, useState } from "react";
-import { ICocktail, ICocktailContext } from "../utils";
+import { ICocktail, ICocktailContext } from "../utilities";
 
 interface ICocktailProviderProps {
   children: ReactNode;

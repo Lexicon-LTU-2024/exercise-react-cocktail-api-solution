@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
-import { useCocktailContext } from "../hooks";
-import { ICocktail } from "../utils";
+import { ICocktail } from "../../../../utilities";
+import { useCocktailContext } from "../../../../hooks";
+import { Button } from "../../../../components";
 
 interface ICocktailActionsProps {
   cocktail: ICocktail;
@@ -17,9 +18,9 @@ export function CocktailActions({ cocktail }: ICocktailActionsProps): ReactEleme
 
   return (
     <div>
-      <button onClick={handleOnClick}>
+      <Button onClick={handleOnClick}>
         {savedToFavorites ? "Remove from favorites" : "Save to favorites"}
-      </button>
+      </Button>
     </div>
   );
 }
