@@ -17,7 +17,7 @@ export function CocktailActions({ cocktail }: ICocktailActionsProps): ReactEleme
   };
 
   return (
-    <div>
+    <div id="cocktail-actions">
       <Button onClick={handleOnClick}>
         {savedToFavorites ? "Remove from favorites" : "Save to favorites"}
       </Button>

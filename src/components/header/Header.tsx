@@ -6,19 +6,20 @@ import { useMediaQuery } from "usehooks-ts";
 import { MIN_TABLET_SIZE } from "../../utilities";
 
 export function Header(): ReactElement {
-  const matches = useMediaQuery(MIN_TABLET_SIZE);
+  const minTabletSize = useMediaQuery(MIN_TABLET_SIZE);
+  const title = "Cocktail Connoisseur";
 
   const renderLogo = (): ReactElement => {
-    return matches ? (
+    return minTabletSize ? (
       <h1 className="logo">
         <Link className="g-link" to="/">
-          Cocktail API
+          {title}
         </Link>
       </h1>
     ) : (
       <h3 className="logo">
         <Link className="g-link" to="/">
-          Cocktail API
+          {title}
         </Link>
       </h3>
     );

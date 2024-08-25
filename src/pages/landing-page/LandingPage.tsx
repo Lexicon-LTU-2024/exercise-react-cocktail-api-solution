@@ -2,14 +2,16 @@ import "./LandingPage.css";
 
 import { ReactElement } from "react";
 import { RandomCocktail } from "./random-cocktail";
+import { useMediaQuery } from "usehooks-ts";
+import { MIN_TABLET_SIZE } from "../../utilities";
+import { WelcomeContent } from "./welcome-content";
 
 export default function LandingPage(): ReactElement {
+  const minTabletSize = useMediaQuery(MIN_TABLET_SIZE);
+
   return (
     <main id="landing-page" className="g-container">
-      <article className="welcome-content">
-        <h1 className="header">Discover the Perfect Cocktail</h1>
-        <p>Explore our collection of classic and innovative cocktail recipes.</p>
-      </article>
+      {minTabletSize && <WelcomeContent />}
       <RandomCocktail />
     </main>
   );

@@ -7,13 +7,13 @@ interface ICocktailIngredientsProps {
 
 export function CocktailIngredients(props: ICocktailIngredientsProps): ReactElement {
   return (
-    <div>
-      <p>Ingredients & Measurements</p>
+    <div id="cocktail-ingredients">
+      <p>
+        <strong>Ingredients</strong>
+      </p>
       {props.ingredients.map((ing, i) => (
         <p key={ing}>
-          <span className="list-item-text">
-            {props.measures[i]} {ing}
-          </span>
+          {props.measures[i]} {ing}
         </p>
       ))}
     </div>

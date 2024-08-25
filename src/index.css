@@ -22,7 +22,8 @@ html {
 
 body {
   background-color: var(--dark-navy);
-  padding-block: calc(var(--header-height) + 3rem);
+  margin-bottom: var(--header-height);
+  padding-top: calc(var(--header-height) + 3rem);
 }
 
 /* #################### Global styling classes. The prefix "g" means global #################### */
@@ -39,7 +40,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   .g-container {
     padding-inline: 6rem;
   }

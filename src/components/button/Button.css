@@ -3,9 +3,15 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
 
   &:hover {
     background-color: #099de8;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .button {
+    padding: 0.5rem 1rem;
   }
 }

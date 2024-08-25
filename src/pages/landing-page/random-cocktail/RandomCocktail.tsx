@@ -2,9 +2,8 @@ import "./RandomCocktail.css";
 
 import { ReactElement, useState } from "react";
 import { Link } from "react-router-dom";
-import { useMediaQuery } from "usehooks-ts";
 
-import { getRandomCocktail, ICocktail, MIN_TABLET_SIZE } from "../../../utilities";
+import { getRandomCocktail, ICocktail } from "../../../utilities";
 import { useTypedLoaderData } from "../../../hooks";
 import { CocktailImage, Button } from "../../../components";
 
@@ -23,10 +22,10 @@ export function RandomCocktail(): ReactElement {
 
   return (
     <article id="random-cocktail">
-      <h1 className="cocktail-header">Random Cocktail of the day!</h1>
+      <h3 className="cocktail-header">Random Cocktail of the day!</h3>
       <div className="cocktail">
         <CocktailImage alt={cocktail.name} src={cocktail.image} />
-        <h2 className="name">{cocktail.name}</h2>
+        <h3 className="name">{cocktail.name}</h3>
         <div className="actions">
           <Button onClick={handleOnClick}>"Another!"</Button>
           <Link to={`cocktail/${cocktail.id}`}>
