@@ -4,10 +4,6 @@
   flex-direction: column;
   gap: 2rem;
 
-  border-radius: var(--standard-border-radius);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 1.5rem;
-  overflow: hidden;
   max-width: 350px;
 
   .cocktail-header {
