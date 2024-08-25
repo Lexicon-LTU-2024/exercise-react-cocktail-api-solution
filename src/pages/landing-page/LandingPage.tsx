@@ -6,7 +6,7 @@ import { useMediaQuery } from "usehooks-ts";
 import { MIN_TABLET_SIZE } from "../../utilities";
 import { WelcomeContent } from "./welcome-content";
 
-export default function LandingPage(): ReactElement {
+export function LandingPage(): ReactElement {
   const minTabletSize = useMediaQuery(MIN_TABLET_SIZE);
 
   return (

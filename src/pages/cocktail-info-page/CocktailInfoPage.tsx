@@ -7,7 +7,7 @@ import { useTypedLoaderData } from "../../hooks";
 import { ICocktail, MIN_MOBILE_L_SIZE } from "../../utilities";
 import { useMediaQuery } from "usehooks-ts";
 
-export default function CocktailInfoPage(): ReactElement {
+export function CocktailInfoPage(): ReactElement {
   const cocktail = useTypedLoaderData<ICocktail>();
   const isMobilLSize = useMediaQuery(MIN_MOBILE_L_SIZE);
 
