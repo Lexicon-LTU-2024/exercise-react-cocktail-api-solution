@@ -1,6 +1,10 @@
 import { INGREDIENT, MEASURE } from ".";
 import { ICocktail, ICocktailRaw, IIndexable } from "./interfaces";
 
+export function calculateResultPages(results: number, resultPerPage = 10): number {
+  return Math.ceil(results / resultPerPage);
+}
+
 export const mapRawCocktailToCocktailBlueprint: IIndexable = {
   idDrink: "id",
   strDrink: "name",

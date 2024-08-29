@@ -1,0 +1,23 @@
+.pagination {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .current-page {
+    justify-self: center;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .pagination {
+    grid-template-columns: 2fr 1fr 2fr;
+
+    .back {
+      justify-self: end;
+    }
+
+    .forward {
+      justify-self: start;
+    }
+  }
+}

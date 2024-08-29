@@ -4,6 +4,7 @@ import { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
 
 interface IButtonProps {
   children: ReactNode;
+  className?: string;
   onClick?: () => void;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   variant?: ButtonVariant;
@@ -12,6 +13,7 @@ interface IButtonProps {
 export function Button(props: IButtonProps): ReactElement {
   const classNames = ["button"];
 
+  if (props.className) classNames.push(props.className);
   if (props.variant === ButtonVariant.Outline) classNames.push(ButtonVariant.Outline);
 
   return (

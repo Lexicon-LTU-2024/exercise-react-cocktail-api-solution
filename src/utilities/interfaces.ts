@@ -66,3 +66,8 @@ export interface IIndexable {
 export interface ICocktailData {
   drinks: ICocktailRaw[];
 }
+
+export interface ICocktailResult {
+  count: number;
+  drinks: ICocktail[];
+}
