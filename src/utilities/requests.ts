@@ -22,12 +22,15 @@ export async function getCocktailsBySearch(request: Request): Promise<ICocktail[
 
   if (url.searchParams.size === 0) return [];
 
-  console.log(url.searchParams);
   const name = url.searchParams.get("s");
   const response = await fetch(`${BASE_API}/search.php?s=${name}`);
   const data: ICocktailData = await response.json();
+
+  if (data.drinks === null) return [];
+
   const cocktailsRaw = data.drinks;
-  console.log(cocktailsRaw);
-  console.log(url);
+  const cocktails = cocktailsRaw.map((c) => mapRawCocktailToCocktail(c));
+  console.log(cocktails);
+
   return [];
 }

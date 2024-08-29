@@ -34,6 +34,7 @@ export function SearchPage(): ReactElement {
         />
         <Button type="submit">Search</Button>
       </form>
+      
     </main>
   );
 }
