@@ -1,0 +1,19 @@
+#search-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .search-form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  #search-page {
+    .search-form {
+      grid-template-columns: 4fr 1fr;
+    }
+  }
+}

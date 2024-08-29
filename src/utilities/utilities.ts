@@ -1,7 +1,5 @@
+import { INGREDIENT, MEASURE } from ".";
 import { ICocktail, ICocktailRaw, IIndexable } from "./interfaces";
-
-const INGREDIENT = "strIngredient";
-const MEASURE = "strMeasure";
 
 export const mapRawCocktailToCocktailBlueprint: IIndexable = {
   idDrink: "id",

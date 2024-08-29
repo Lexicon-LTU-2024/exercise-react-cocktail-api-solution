@@ -7,7 +7,7 @@ import { getRandomCocktail, ICocktail } from "../../../utilities";
 import { useTypedLoaderData } from "../../../hooks";
 import { CocktailImage, Button } from "../../../components";
 
-export function RandomCocktail(): ReactElement {
+export default function RandomCocktail(): ReactElement {
   const initialRandomCocktail = useTypedLoaderData<ICocktail>();
   const [cocktail, setCocktail] = useState<ICocktail>(initialRandomCocktail);
   const [isLoading, setIsLoading] = useState<boolean>(false);

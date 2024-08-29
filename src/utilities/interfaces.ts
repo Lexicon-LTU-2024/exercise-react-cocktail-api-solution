@@ -66,3 +66,10 @@ export interface IIndexable {
 export interface ICocktailData {
   drinks: ICocktailRaw[];
 }
+
+export interface IQueryParams {
+  c?: string; // category
+  g?: string; // glass
+  i?: string; // ingredient
+  s?: string; // name
+}
