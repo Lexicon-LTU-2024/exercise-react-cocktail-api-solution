@@ -1,5 +1,5 @@
 import { BASE_API, mapRawCocktailToCocktail } from ".";
-import { ICocktail, ICocktailData, IQueryParams } from "./interfaces";
+import { ICocktail, ICocktailData } from "./interfaces";
 
 export async function getRandomCocktail(): Promise<ICocktail> {
   const response = await fetch(`${BASE_API}/random.php`);

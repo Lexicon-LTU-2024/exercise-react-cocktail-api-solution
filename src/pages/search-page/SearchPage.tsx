@@ -1,7 +1,7 @@
 import "./SearchPage.css";
 
 import { FormEventHandler, ReactElement, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { SearchInput } from "./search-input";
 import { Button } from "../../components";
 import { useMediaQuery } from "usehooks-ts";
