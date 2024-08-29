@@ -6,6 +6,7 @@ import { SearchInput } from "./search-input";
 import { Button } from "../../components";
 import { useMediaQuery } from "usehooks-ts";
 import { MIN_MOBILE_L_SIZE } from "../../utilities";
+import { SearchResults } from "./search-results";
 
 export function SearchPage(): ReactElement {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -34,7 +35,7 @@ export function SearchPage(): ReactElement {
         />
         <Button type="submit">Search</Button>
       </form>
-      
+      <SearchResults />
     </main>
   );
 }

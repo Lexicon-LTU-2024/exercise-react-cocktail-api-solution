@@ -17,12 +17,12 @@ export async function getCocktailById(id: string): Promise<ICocktail> {
   return cocktailById;
 }
 
-export async function getCocktailsBySearch(request: Request): Promise<ICocktail[]> {
+export async function getCocktailsByName(request: Request): Promise<ICocktail[]> {
   const url = new URL(request.url);
 
   if (url.searchParams.size === 0) return [];
 
-  const name = url.searchParams.get("s");
+  const name = url.searchParams.get("s"); // Value for the name query parameter
   const response = await fetch(`${BASE_API}/search.php?s=${name}`);
   const data: ICocktailData = await response.json();
 
@@ -30,7 +30,6 @@ export async function getCocktailsBySearch(request: Request): Promise<ICocktail[
 
   const cocktailsRaw = data.drinks;
   const cocktails = cocktailsRaw.map((c) => mapRawCocktailToCocktail(c));
-  console.log(cocktails);
 
-  return [];
+  return cocktails;
 }

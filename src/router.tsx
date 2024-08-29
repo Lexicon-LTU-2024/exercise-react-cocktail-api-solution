@@ -1,6 +1,6 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom";
 import { App } from "./components";
-import { getCocktailById, getCocktailsBySearch, getRandomCocktail } from "./utilities";
+import { getCocktailById, getCocktailsByName, getRandomCocktail } from "./utilities";
 import { LandingPage, CocktailInfoPage, SearchPage } from "./pages";
 
 export const router = createBrowserRouter(
@@ -14,7 +14,7 @@ export const router = createBrowserRouter(
       />
       <Route
         element={<SearchPage />}
-        loader={({ request }) => getCocktailsBySearch(request)}
+        loader={({ request }) => getCocktailsByName(request)}
         path="/search"
       />
     </Route>

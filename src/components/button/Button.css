@@ -5,6 +5,11 @@
   cursor: pointer;
   padding: 0.5rem 0.5rem;
 
+  &.outline {
+    background-color: transparent;
+    border: 1px solid var(--white);
+  }
+
   &:hover {
     background-color: #099de8;
   }
