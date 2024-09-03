@@ -13,15 +13,19 @@ interface IPaginationProps {
 export function Pagination(props: IPaginationProps): ReactElement {
   return (
     <div className="pagination">
-      <Button className="back" onClick={props.back}>
-        Page {props.currentPage - 1}
-      </Button>
+      {props.currentPage > 1 && (
+        <Button className="back" onClick={props.back}>
+          Back
+        </Button>
+      )}
       <p className="current-page">
         {props.currentPage}/{props.pages}
       </p>
-      <Button className="forward" onClick={props.next}>
-        Page {props.currentPage + 1}
-      </Button>
+      {props.currentPage !== props.pages && (
+        <Button className="forward" onClick={props.next}>
+          Next
+        </Button>
+      )}
     </div>
   );
 }

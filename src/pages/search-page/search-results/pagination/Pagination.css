@@ -3,8 +3,17 @@
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
 
+  .back {
+    grid-column: 1/2;
+  }
+
   .current-page {
     justify-self: center;
+    grid-column: 2/3;
+  }
+
+  .forward {
+    grid-column: 3/4;
   }
 }
 

@@ -4,7 +4,6 @@ import { ReactElement, useState } from "react";
 import { useTypedLoaderData } from "../../../hooks";
 import { calculateResultPages, ICocktailResult } from "../../../utilities";
 import { SearchResultItem } from "./search-result-item";
-import { Button } from "../../../components";
 import { Pagination } from "./pagination";
 
 export function SearchResults(): ReactElement {
