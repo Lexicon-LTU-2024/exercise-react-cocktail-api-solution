@@ -1,50 +1,7 @@
-# React + TypeScript + Vite
+# Cocktail API Solution.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution repo for the exercise: [Cocktail API](https://github.com/Lexicon-LTU-2024/exercise-react-cocktail-api). So far _( 2024-09-03)_ it just contains a solution for the base requirements. No bonuse feature. But those will be added later on. In those cases an edit of the readme file will be done.
 
-Currently, two official plugins are available:
+In this solution, I have tried to avoid using the need for `useEffect` when doing requests to the Cocktail API endpoints. There is an alternative solution that includes loaders, which is a concept in React Router version 6+ that triggers requests when initiating a route change. Depending on which route you navigate to you can trigger different loaders. The purpose is to have the data, ready to use, when you end up on your next route. You can read more about loaders here: [Loaders in React Router](https://reactrouter.com/en/main/route/loader#loader).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+More info to be added later...
