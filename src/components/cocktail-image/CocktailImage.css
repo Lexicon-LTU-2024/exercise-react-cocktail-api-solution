@@ -1,5 +1,9 @@
 .cocktail-image {
+  /* Quick fix to remove weird space at bottom of figure */
+  margin-bottom: -6px;
+
   img {
+    height: 100%;
     width: 100%;
   }
 }

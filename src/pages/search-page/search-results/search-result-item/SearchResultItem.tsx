@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { ButtonVariant, ICocktail, MIN_MOBILE_L_SIZE } from "../../../../utilities";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";
-import { Button } from "../../../../components";
+import { Button, CocktailImage } from "../../../../components";
 
 interface ISearchResultItemProps {
   cocktail: ICocktail;
@@ -15,7 +15,7 @@ export function SearchResultItem({ cocktail }: ISearchResultItemProps): ReactEle
     if (isMinMobilLSize) {
       return (
         <Link className="g-link" to={`/cocktail/${cocktail.id}`}>
-          View recipe of {cocktail.name}
+          View {cocktail.name}
         </Link>
       );
     }
@@ -23,7 +23,7 @@ export function SearchResultItem({ cocktail }: ISearchResultItemProps): ReactEle
     return (
       <Button type="button" variant={ButtonVariant.Outline}>
         <Link className="g-link" to={`/cocktail/${cocktail.id}`}>
-          View recipe of {cocktail.name}
+          View
         </Link>
       </Button>
     );
@@ -31,6 +31,8 @@ export function SearchResultItem({ cocktail }: ISearchResultItemProps): ReactEle
 
   return (
     <article className="search-result-item">
+      {isMinMobilLSize && <CocktailImage alt={cocktail.name} src={cocktail.image} />}
+
       <h2>{cocktail.name}</h2>
       {renderButtonLink()}
     </article>
