@@ -11,7 +11,7 @@ export function CocktailDetails({ cocktail }: ICocktailDetails): ReactElement {
   return (
     <div id="cocktail-details">
       <h2 className="name">{cocktail.name}</h2>
-      <p>
+      <p className="more-info">
         <strong>Best served in:</strong> {cocktail.glass}
       </p>
       <CocktailIngredients ingredients={cocktail.ingredients} measures={cocktail.measures} />

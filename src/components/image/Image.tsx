@@ -5,7 +5,7 @@ interface IImageProps {
   src: string;
 }
 
-export function CocktailImage({ alt, src }: IImageProps): ReactElement {
+export function Image({ alt, src }: IImageProps): ReactElement {
   const classes = ["cocktail-image"];
 
   return (

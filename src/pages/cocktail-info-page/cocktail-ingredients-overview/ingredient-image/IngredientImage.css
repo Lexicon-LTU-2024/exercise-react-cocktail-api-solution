@@ -1,0 +1,26 @@
+.ingredient-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  border-bottom: 1px solid var(--blue);
+  cursor: pointer;
+  padding-bottom: 1rem;
+  max-width: 200px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredient-image {
+    border-bottom: none;
+  }
+}

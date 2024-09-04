@@ -1,9 +1,10 @@
 import { ReactElement } from "react";
-import { CocktailImage } from "../../components";
+import { Image } from "../../components";
 import { CocktailDetails } from "./cocktail-details";
 import { useTypedLoaderData } from "../../hooks";
 import { ICocktail, MIN_MOBILE_L_SIZE } from "../../utilities";
 import { useMediaQuery } from "usehooks-ts";
+import { CocktailIngredientsOverview } from "./cocktail-ingredients-overview";
 
 export function CocktailInfoPage(): ReactElement {
   const cocktail = useTypedLoaderData<ICocktail>();
@@ -16,8 +17,9 @@ export function CocktailInfoPage(): ReactElement {
       ) : (
         <h2 className="header">Cocktail Details</h2>
       )}
-      <CocktailImage alt={cocktail.name} src={cocktail.image} />
+      <Image alt={cocktail.name} src={cocktail.image} />
       <CocktailDetails cocktail={cocktail} />
+      <CocktailIngredientsOverview ingredients={cocktail.ingredients} />
     </main>
   );
 }

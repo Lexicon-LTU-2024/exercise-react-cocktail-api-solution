@@ -1,8 +1,19 @@
-import { INGREDIENT, MEASURE } from ".";
+import { ImageSize, INGREDIENT, MEASURE } from ".";
 import { ICocktail, ICocktailRaw, IIndexable } from "./interfaces";
 
 export function calculateResultPages(results: number, resultPerPage = 10): number {
   return Math.ceil(results / resultPerPage);
+}
+
+export function getImageSizeSuffix(size: ImageSize): string {
+  switch (size) {
+    case ImageSize.Small:
+      return "-Small.png";
+    case ImageSize.Medium:
+      return "-Medium.png";
+    case ImageSize.Large:
+      return ".png";
+  }
 }
 
 export const mapRawCocktailToCocktailBlueprint: IIndexable = {

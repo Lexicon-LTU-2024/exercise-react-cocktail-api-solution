@@ -6,6 +6,8 @@
 @import url("./pages/cocktail-info-page/CocktailInfoPage.css");
 @import url("./pages/cocktail-info-page/cocktail-details/CocktailDetails.css");
 @import url("./pages/cocktail-info-page/cocktail-details/cocktail-actions/CocktailActions.css");
+@import url("./pages/cocktail-info-page/cocktail-ingredients-overview/CocktailIngredientsOverview.css");
+@import url("./pages/cocktail-info-page/cocktail-ingredients-overview/ingredient-image/IngredientImage.css");
 
 @import url("./pages/landing-page/LandingPage.css");
 @import url("./pages/landing-page/random-cocktail/RandomCocktail.css");
@@ -20,7 +22,7 @@
 
 /* General components*/
 @import url("./components/button/Button.css");
-@import url("./components/cocktail-image/CocktailImage.css");
+@import url("./components/image/Image.css");
 @import url("./components/header/Header.css");
 
 * {
