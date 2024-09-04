@@ -1,4 +1,4 @@
-import { HTMLInputTypeAttribute, ReactElement, useState } from "react";
+import { HTMLInputTypeAttribute, ReactElement } from "react";
 
 interface ISearchInputProps {
   name?: string;

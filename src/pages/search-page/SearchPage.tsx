@@ -17,7 +17,8 @@ export function SearchPage(): ReactElement {
 
   const handleOnSubmit: FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    setSearchParams({ s: name }); // This will automatically revalidate my loader function as it's tied to the route, including the query (search) params.
+    if (name === "") return;
+    setSearchParams({ s: name }); // This will automatically revalidate ( rerun it ) my loader function as it's tied to the route, including the query (search) params.
   };
 
   return (
