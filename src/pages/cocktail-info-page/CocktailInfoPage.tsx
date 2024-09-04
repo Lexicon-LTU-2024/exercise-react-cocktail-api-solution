@@ -1,5 +1,3 @@
-import "./CocktailInfoPage.css";
-
 import { ReactElement } from "react";
 import { CocktailImage } from "../../components";
 import { CocktailDetails } from "./cocktail-details";

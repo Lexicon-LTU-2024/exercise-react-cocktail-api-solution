@@ -1,5 +1,27 @@
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Pages and their nested components */
+@import url("./pages/cocktail-info-page/CocktailInfoPage.css");
+@import url("./pages/cocktail-info-page/cocktail-details/CocktailDetails.css");
+@import url("./pages/cocktail-info-page/cocktail-details/cocktail-actions/CocktailActions.css");
+
+@import url("./pages/landing-page/LandingPage.css");
+@import url("./pages/landing-page/random-cocktail/RandomCocktail.css");
+@import url("./pages/landing-page/welcome-content/WelcomeContent.css");
+
+@import url("./pages/search-page/SearchPage.css");
+@import url("./pages/search-page/search-input/SearchInput.css");
+@import url("./pages/search-page/search-list/search-list-item/SearchListItem.css");
+@import url("./pages/search-page/search-results/SearchResults.css");
+@import url("./pages/search-page/search-results/pagination/Pagination.css");
+@import url("./pages/search-page/search-results/search-result-item/SearchResultItem.css");
+
+/* General components*/
+@import url("./components/button/Button.css");
+@import url("./components/cocktail-image/CocktailImage.css");
+@import url("./components/header/Header.css");
 
 * {
   box-sizing: border-box;

@@ -1,4 +1,3 @@
-import "./SearchInput.css";
 import { HTMLInputTypeAttribute, ReactElement, useState } from "react";
 
 interface ISearchInputProps {

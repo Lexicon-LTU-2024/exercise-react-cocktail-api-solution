@@ -1,5 +1,3 @@
-import "./RandomCocktail.css";
-
 import { ReactElement, useState } from "react";
 import { Link } from "react-router-dom";
 

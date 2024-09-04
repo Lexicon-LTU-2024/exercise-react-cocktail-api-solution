@@ -1,5 +1,3 @@
-import "./SearchPage.css";
-
 import { FormEventHandler, ReactElement, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { SearchInput } from "./search-input";

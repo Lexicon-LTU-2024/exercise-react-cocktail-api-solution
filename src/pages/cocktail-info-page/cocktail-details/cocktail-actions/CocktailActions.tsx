@@ -1,5 +1,3 @@
-import "./CocktailActions.css";
-
 import { ReactElement } from "react";
 import { ICocktail } from "../../../../utilities";
 import { useCocktailContext } from "../../../../hooks";

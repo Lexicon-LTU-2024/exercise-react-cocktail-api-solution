@@ -1,4 +1,3 @@
-import "./CocktailImage.css";
 import { ReactElement } from "react";
 
 interface IImageProps {

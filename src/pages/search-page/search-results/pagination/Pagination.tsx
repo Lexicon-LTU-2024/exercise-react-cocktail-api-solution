@@ -1,5 +1,3 @@
-import "./Pagination.css";
-
 import { ReactElement } from "react";
 import { Button } from "../../../../components";
 

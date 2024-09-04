@@ -1,5 +1,3 @@
-import "./Header.css";
-
 import { ReactElement } from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "usehooks-ts";

@@ -1,5 +1,4 @@
 import { BUTTON_VARIANT, ButtonVariant } from "../../utilities";
-import "./Button.css";
 import { ButtonHTMLAttributes, ReactElement, ReactNode } from "react";
 
 interface IButtonProps {

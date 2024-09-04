@@ -1,4 +1,3 @@
-import "./WelcomeContent.css";
 import { ReactElement } from "react";
 
 export function WelcomeContent(): ReactElement {

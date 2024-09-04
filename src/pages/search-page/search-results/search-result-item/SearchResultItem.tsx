@@ -1,5 +1,3 @@
-import "./SearchResultItem.css";
-
 import { ReactElement } from "react";
 import { ButtonVariant, ICocktail, MIN_MOBILE_L_SIZE } from "../../../../utilities";
 import { Link } from "react-router-dom";

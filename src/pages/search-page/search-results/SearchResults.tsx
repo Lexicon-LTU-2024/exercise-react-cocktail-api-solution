@@ -1,5 +1,3 @@
-import "./SearchResults.css";
-
 import { ReactElement, useState } from "react";
 import { useTypedLoaderData } from "../../../hooks";
 import { calculateResultPages, ICocktailResult } from "../../../utilities";

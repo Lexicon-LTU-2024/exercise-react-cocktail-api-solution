@@ -1,5 +1,3 @@
-import "./LandingPage.css";
-
 import { lazy, ReactElement, Suspense } from "react";
 // import { RandomCocktail } from "./random-cocktail";
 import { useMediaQuery } from "usehooks-ts";
