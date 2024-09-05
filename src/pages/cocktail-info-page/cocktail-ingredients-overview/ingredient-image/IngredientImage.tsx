@@ -9,7 +9,6 @@ interface IIngredientImage {
 
 export function IngredientImage({ ingredient, size }: IIngredientImage): ReactElement {
   const imagePath: string = IMAGE_BASE_PATH + ingredient + getImageSizeSuffix(size);
-  console.log(imagePath);
 
   return (
     <article className="ingredient-image">

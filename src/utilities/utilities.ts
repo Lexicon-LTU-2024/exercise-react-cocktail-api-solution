@@ -1,5 +1,5 @@
 import { ImageSize, INGREDIENT, MEASURE } from ".";
-import { ICocktail, ICocktailRaw, IIndexable } from "./interfaces";
+import { ICocktail, ICocktailRaw, IHasIngredientsAndMeasures, IIndexable } from "./interfaces";
 
 export function calculateResultPages(results: number, resultPerPage = 10): number {
   return Math.ceil(results / resultPerPage);
@@ -16,6 +16,51 @@ export function getImageSizeSuffix(size: ImageSize): string {
   }
 }
 
+// There are some weird typings required to make TS happy in this "half-generic" function
+export function mapRawToDomain<T extends IIndexable, U extends IIndexable>(
+  rawObject: T,
+  blueprint: IIndexable,
+  ingredientKeyPattern?: string,
+  measureKeyPattern?: string
+): U {
+  const mappedObject: U = {} as U;
+
+  if (ingredientKeyPattern) {
+    (mappedObject as unknown as IHasIngredientsAndMeasures).ingredients = [];
+  }
+
+  if (measureKeyPattern) {
+    (mappedObject as unknown as IHasIngredientsAndMeasures).measures = [];
+  }
+
+  Object.keys(rawObject).reduce((acc, key) => {
+    const value: any = rawObject[key];
+
+    if (value === null) return acc;
+
+    if (ingredientKeyPattern && key.includes(ingredientKeyPattern)) {
+      (acc as unknown as IHasIngredientsAndMeasures).ingredients.push(value);
+      return acc;
+    }
+
+    if (measureKeyPattern && key.includes(measureKeyPattern)) {
+      (acc as unknown as IHasIngredientsAndMeasures).measures.push(value);
+      return acc;
+    }
+
+    const mappedKey = blueprint[key];
+    if (mappedKey === undefined) return acc;
+
+    (acc as IIndexable)[mappedKey] = value;
+
+    return acc;
+  }, mappedObject);
+
+  return mappedObject;
+}
+
+// ########## Map Blueprints ########## //
+
 export const mapRawCocktailToCocktailBlueprint: IIndexable = {
   idDrink: "id",
   strDrink: "name",
@@ -27,42 +72,11 @@ export const mapRawCocktailToCocktailBlueprint: IIndexable = {
   dateModified: "dateModified",
 };
 
-export function mapRawCocktailToCocktail(rawCocktail: ICocktailRaw): ICocktail {
-  const cocktail = {
-    id: "",
-    name: "",
-    category: "",
-    alcoholic: "",
-    glass: "",
-    instructions: "",
-    image: "",
-    ingredients: [],
-    measures: [],
-    dateModified: "",
-  } as ICocktail;
-
-  Object.keys(rawCocktail).reduce((acc, key) => {
-    const value = rawCocktail[key];
-
-    if (value === null) return acc;
-
-    if (key.includes(INGREDIENT)) {
-      acc.ingredients.push(value);
-      return acc;
-    }
-
-    if (key.includes(MEASURE)) {
-      acc.measures.push(value);
-      return acc;
-    }
-
-    const mappedKey = mapRawCocktailToCocktailBlueprint[key];
-
-    if (mappedKey === undefined) return acc;
-
-    acc[mappedKey] = value;
-    return acc;
-  }, cocktail);
-
-  return cocktail;
-}
+export const mapRawIngredientToIngredientBlueprint: IIndexable = {
+  idIngredient: "id",
+  strIngredient: "name",
+  strDescription: "description",
+  strType: "type",
+  strAlcohol: "alcohol",
+  strABV: "ABV",
+};

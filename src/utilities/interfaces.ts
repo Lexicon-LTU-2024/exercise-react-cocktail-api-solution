@@ -1,4 +1,4 @@
-export interface ICocktail extends IIndexable {
+export interface ICocktail extends IIndexable, IHasIngredientsAndMeasures {
   id: string;
   name: string;
   category: string;
@@ -6,8 +6,6 @@ export interface ICocktail extends IIndexable {
   glass: string;
   instructions: string;
   image: string;
-  ingredients: string[];
-  measures: string[];
   dateModified: string;
 }
 
@@ -16,6 +14,10 @@ export interface ICocktailContext {
   checkIfExistsInFavorites: (cocktailId: string) => boolean;
   favorites: ICocktail[];
   removeFromFavorites: (cocktailId: string) => void;
+}
+
+export interface ICocktailData {
+  drinks: ICocktailRaw[];
 }
 
 export interface ICocktailRaw extends IIndexable {
@@ -59,15 +61,18 @@ export interface ICocktailRaw extends IIndexable {
   dateModified: string;
 }
 
+export interface ICocktailResult {
+  count: number;
+  drinks: ICocktail[];
+}
+
 export interface IIndexable {
   [key: string]: any;
 }
 
-export interface ICocktailData {
-  drinks: ICocktailRaw[];
-}
+export interface IIngredient {}
 
-export interface ICocktailResult {
-  count: number;
-  drinks: ICocktail[];
+export interface IHasIngredientsAndMeasures {
+  ingredients: string[];
+  measures: string[];
 }
