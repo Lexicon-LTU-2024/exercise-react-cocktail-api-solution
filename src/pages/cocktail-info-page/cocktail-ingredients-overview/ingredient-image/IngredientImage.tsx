@@ -1,6 +1,7 @@
 import { ReactElement } from "react";
 import { Image } from "../../../../components";
 import { IMAGE_BASE_PATH, ImageSize } from "../../../../utilities";
+import { Link } from "react-router-dom";
 
 interface IIngredientImage {
   ingredient: string;
@@ -26,9 +27,9 @@ export function IngredientImage({ ingredient, size }: IIngredientImage): ReactEl
   }
 
   return (
-    <article className={classes.join(" ")}>
+    <Link to="#" className={classes.join(" ")}>
       <Image alt={ingredient} src={imagePath} />
       <figcaption className="name">{ingredient}</figcaption>
-    </article>
+    </Link>
   );
 }

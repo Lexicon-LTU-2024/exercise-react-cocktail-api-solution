@@ -20,7 +20,7 @@ export function CocktailIngredientsOverview({
       </p>
       {ingredients.map((ing) =>
         isMobilLSize ? (
-          <IngredientImage ingredient={ing} key={ing} size={ImageSize.Medium} />
+          <IngredientImage ingredient={ing} key={ing} />
         ) : (
           <IngredientImage ingredient={ing} key={ing} size={ImageSize.Medium} />
         )
