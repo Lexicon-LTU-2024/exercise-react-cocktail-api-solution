@@ -2,14 +2,13 @@ import { ReactElement } from "react";
 
 interface IImageProps {
   alt: string;
+  size?: string;
   src: string;
 }
 
-export function Image({ alt, src }: IImageProps): ReactElement {
-  const classes = ["cocktail-image"];
-
+export function Image({ alt, size, src }: IImageProps): ReactElement {
   return (
-    <figure className={classes.join(" ")}>
+    <figure className="cocktail-image" >
       <img src={src} alt={alt} />
     </figure>
   );

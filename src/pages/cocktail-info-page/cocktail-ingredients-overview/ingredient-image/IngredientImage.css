@@ -9,13 +9,21 @@
   padding-bottom: 1rem;
   max-width: 200px;
 
+  .name {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
   &:last-child {
     border-bottom: none;
   }
 
-  .name {
-    font-size: 1.5rem;
-    text-align: center;
+  &.medium {
+    width: 150px;
+  }
+  
+  &.small {
+    width: 100px;
   }
 }
 

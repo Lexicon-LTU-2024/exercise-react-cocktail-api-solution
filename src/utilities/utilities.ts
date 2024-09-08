@@ -1,19 +1,7 @@
-import { ImageSize, INGREDIENT, MEASURE } from ".";
-import { ICocktail, ICocktailRaw, IHasIngredientsAndMeasures, IIndexable } from "./interfaces";
+import { IHasIngredientsAndMeasures, IIndexable } from "./interfaces";
 
 export function calculateResultPages(results: number, resultPerPage = 10): number {
   return Math.ceil(results / resultPerPage);
-}
-
-export function getImageSizeSuffix(size: ImageSize): string {
-  switch (size) {
-    case ImageSize.Small:
-      return "-Small.png";
-    case ImageSize.Medium:
-      return "-Medium.png";
-    case ImageSize.Large:
-      return ".png";
-  }
 }
 
 // There are some weird typings required to make TS happy in this "half-generic" function

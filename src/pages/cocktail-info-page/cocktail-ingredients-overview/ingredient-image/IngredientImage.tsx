@@ -1,17 +1,32 @@
 import { ReactElement } from "react";
 import { Image } from "../../../../components";
-import { getImageSizeSuffix, IMAGE_BASE_PATH, ImageSize } from "../../../../utilities";
+import { IMAGE_BASE_PATH, ImageSize } from "../../../../utilities";
 
 interface IIngredientImage {
   ingredient: string;
-  size: ImageSize;
+  size?: ImageSize;
 }
 
 export function IngredientImage({ ingredient, size }: IIngredientImage): ReactElement {
-  const imagePath: string = IMAGE_BASE_PATH + ingredient + getImageSizeSuffix(size);
+  const classes: string[] = ["ingredient-image"];
+  const imagePath: string = IMAGE_BASE_PATH + ingredient + ".png";
+
+  if (size) {
+    switch (size) {
+      case ImageSize.Large:
+        classes.push("large");
+        break;
+      case ImageSize.Medium:
+        classes.push("medium");
+        break;
+      case ImageSize.Small:
+        classes.push("small");
+        break;
+    }
+  }
 
   return (
-    <article className="ingredient-image">
+    <article className={classes.join(" ")}>
       <Image alt={ingredient} src={imagePath} />
       <figcaption className="name">{ingredient}</figcaption>
     </article>
