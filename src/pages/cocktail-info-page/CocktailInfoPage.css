@@ -1,14 +1,19 @@
 #cocktail-info-page {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 3rem;
+
+  .cocktail-image {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
 @media only screen and (min-width: 768px) {
   #cocktail-info-page {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    grid-template-columns: 45% 1fr;
 
     .header {
       grid-column: 1/3;

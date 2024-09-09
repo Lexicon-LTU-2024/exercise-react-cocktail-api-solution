@@ -10,21 +10,25 @@ interface ICocktailIngredientsOverviewProps {
 export function CocktailIngredientsOverview({
   ingredients,
 }: ICocktailIngredientsOverviewProps): ReactElement {
-  const isMobilLSize = useMediaQuery(MIN_MOBILE_L_SIZE);
+  const isMobileLSize = useMediaQuery(MIN_MOBILE_L_SIZE);
 
   return (
     <section id="cocktail-ingredient-overview">
-      <h1 className="title">Overview of Ingredients</h1>
-      <p className="more-info">
-        <em>( Click for more info )</em>
-      </p>
-      {ingredients.map((ing) =>
-        isMobilLSize ? (
-          <IngredientImage ingredient={ing} key={ing} />
-        ) : (
-          <IngredientImage ingredient={ing} key={ing} size={ImageSize.Medium} />
-        )
-      )}
+      <div className="overview-header">
+        <h1 className="title">Overview of Ingredients</h1>
+        <p className="more-info">
+          <em>( Click for more info )</em>
+        </p>
+      </div>
+      <div className="ingredients">
+        {ingredients.map((ing) =>
+          isMobileLSize ? (
+            <IngredientImage ingredient={ing} key={ing} />
+          ) : (
+            <IngredientImage ingredient={ing} key={ing} size={ImageSize.Small} />
+          )
+        )}
+      </div>
     </section>
   );
 }

@@ -17,6 +17,7 @@ export function CocktailInfoPage(): ReactElement {
       ) : (
         <h2 className="header">Cocktail Details</h2>
       )}
+      {/* <figure className="cocktail-image" style={{ backgroundImage: `url(${cocktail.image})` }} /> */}
       <Image alt={cocktail.name} src={cocktail.image} />
       <CocktailDetails cocktail={cocktail} />
       <CocktailIngredientsOverview ingredients={cocktail.ingredients} />

@@ -6,8 +6,8 @@
 
   border-bottom: 1px solid var(--blue);
   cursor: pointer;
-  padding-bottom: 1rem;
   max-width: 200px;
+  padding-bottom: 1rem;
 
   .name {
     font-size: 1.5rem;
@@ -21,7 +21,7 @@
   &.medium {
     width: 150px;
   }
-  
+
   &.small {
     width: 100px;
   }
